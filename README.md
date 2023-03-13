@@ -92,10 +92,10 @@ Below is the code of the corresponding program in the form of a table:
 |2|TFR|17|15|Forwarding “x” to the 17th address so as not to lose the value later|
 |3|TFR|18|16|Forwarding “z” to 18 address so as not to lose the value later|
 |4|MLR|17|15|Multiplying “x” by “x” (squaring)|
-|5|MLR|17|15|Multiplying “x2” by “x” (cubing)|
-|6|MLR|14|17|Multiplication of “x3” by 4, sent in advance to address 14|
+|5|MLR|17|15|Multiplying “x^2” by “x” (cubing)|
+|6|MLR|14|17|Multiplication of “x^3” by 4, sent in advance to address 14|
 |7|MLR|18|16|Multiplying “z” by “z” (squaring)|
-|8|MLR|18|15|Multiplication of “z2” by “x” (calculation of the divisor)|
+|8|MLR|18|15|Multiplication of “z^2” by “x” (calculation of the divisor)|
 |9|MLR|19|16|Multiplying “z” by 10, sent in advance to address 19|
 |10|ADR|14|19|Addition of 4x3 and 10z (calculation of division)|
 |11|DVR|14|18|Final division of pre-calculated values|
@@ -187,3 +187,5 @@ Below is the code of the corresponding program in the form of a table:
 |32|TFR|000|5|Forwarding to 32 address 5|
 
 ***Table 4**. Code of the program for calculating arrays using loops*
+
+If you encounter any confusion while using the emulator, please don't hesitate to reach out to me at https://t.me/worriedsick! I'll be more than happy to assist you with any questions or concerns you may have.
