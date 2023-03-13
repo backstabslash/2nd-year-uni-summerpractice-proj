@@ -40,7 +40,7 @@ namespace EM3
         {
             if (A1 == "000" || A2 == "000") { registers.regsChanged(); return; }
             registers.regsChanged();
-            OnPropertyChanged(A1 + " ПЕР 000 " + A2);
+            OnPropertyChanged(A1 + " TFR 000 " + A2);
             
         }
         public void AddIntOp(string A1, string R1, string R2)
@@ -51,7 +51,7 @@ namespace EM3
             else if (temp > 0) {registers.Z = 0; registers.w = 2; registers.S = 0; }
             else { registers.Z = 1; registers.w = 0; registers.S = 0; }
             registers.regsChanged();
-            OnPropertyChanged(A1 + " ПЕР 000 " + temp);
+            OnPropertyChanged(A1 + " TFR 000 " + temp);
         }
         public void AddFloatOp(string A1, string R1, string R2)
         {
@@ -61,7 +61,7 @@ namespace EM3
             else { registers.Z = 1; registers.w = 0; registers.S = 0; }
             registers.R1 = decimal.Parse(R1); registers.R2 = decimal.Parse(R2);
             registers.regsChanged();
-            OnPropertyChanged(A1 + " ПЕР 000 " + final);
+            OnPropertyChanged(A1 + " TFR 000 " + final);
         }
         public void SubFloatOp(string A1, string R1, string R2)
         {
@@ -71,7 +71,7 @@ namespace EM3
             else { registers.Z = 1; registers.w = 0; registers.S = 0; }
             registers.R1 = decimal.Parse(R1); registers.R2 = decimal.Parse(R2);
             registers.regsChanged();
-            OnPropertyChanged(A1 + " ПЕР 000 " + final);
+            OnPropertyChanged(A1 + " TFR 000 " + final);
         }
         public void MulFloatOp(string A1, string R1, string R2)
         {
@@ -81,7 +81,7 @@ namespace EM3
             else { registers.Z = 1; registers.w = 0; registers.S = 0; }
             registers.R1 = Convert.ToDecimal(R1); registers.R2 = Convert.ToDecimal(R2);
             registers.regsChanged();
-            OnPropertyChanged(A1 + " ПЕР 000 " + final);
+            OnPropertyChanged(A1 + " TFR 000 " + final);
         }
         public void DivFloatOp(string A1, string R1, string R2)
         {
@@ -91,7 +91,7 @@ namespace EM3
             else { registers.Z = 1; registers.w = 0; registers.S = 0; }
             registers.R1 = decimal.Parse(R1); registers.R2 = decimal.Parse(R2);
             registers.regsChanged();
-            OnPropertyChanged(A1 + " ПЕР 000 " + final);
+            OnPropertyChanged(A1 + " TFR 000 " + final);
         }
         public void InputFloatArr(string A1, string A2)
         {
@@ -111,7 +111,7 @@ namespace EM3
                 if (counter > 1 || inputWin.temp.Contains('ю') || inputWin.temp.Contains('б'))
                     throw new ArgumentException("Invalid number entered");
                 inputWin.temp = inputWin.temp.Replace('.', ',');
-                OnPropertyChanged(A1 + " ПЕР 000 " + inputWin.temp);
+                OnPropertyChanged(A1 + " TFR 000 " + inputWin.temp);
                 A1 = (Convert.ToInt32(A1) + 1).ToString();
                 OnPropertyChangedInputArr(inputWin.temp);
             }
@@ -122,7 +122,7 @@ namespace EM3
             for (int i = 0; i < int.Parse(A2); i++)
             {
                 inputWin.ShowDialog();
-                OnPropertyChanged(A1 + " ПЕР 000 " + inputWin.temp);
+                OnPropertyChanged(A1 + " TFR 000 " + inputWin.temp);
                 A1 = (Convert.ToInt32(A1) + 1).ToString();
                 OnPropertyChangedInputArr(inputWin.temp);
             }
@@ -136,7 +136,7 @@ namespace EM3
         {
             A2 = A2.Replace('.', ',');
             int a = Decimal.ToInt32(decimal.Parse(A2));
-            OnPropertyChanged(A1 + " ПЕР 000 " + a.ToString());
+            OnPropertyChanged(A1 + " TFR 000 " + a.ToString());
         }
         public void SubIntOp(string A1, string R1, string R2)
         {
@@ -146,7 +146,7 @@ namespace EM3
             else if (temp > 0) { registers.Z = 0; registers.w = 2; registers.S = 0; }
             else { registers.Z = 1; registers.w = 0; registers.S = 0; }
             registers.regsChanged();
-            OnPropertyChanged(A1 + " ПЕР 000 " + temp);
+            OnPropertyChanged(A1 + " TFR 000 " + temp);
         }
         public void MulIntOp(string A1, string R1, string R2)
         {
@@ -156,7 +156,7 @@ namespace EM3
             else if (temp > 0) { registers.Z = 0; registers.w = 2; registers.S = 0; }
             else { registers.Z = 1; registers.w = 0; registers.S = 0; }
             registers.regsChanged();
-            OnPropertyChanged(A1 + " ПЕР 000 " + temp);
+            OnPropertyChanged(A1 + " TFR 000 " + temp);
         }
         public void DivIntOp(string A1, string R1, string R2)
         {
@@ -166,7 +166,7 @@ namespace EM3
             else if (temp > 0) { registers.Z = 0; registers.w = 2; registers.S = 0; }
             else { registers.Z = 1; registers.w = 0; registers.S = 0; }
             registers.regsChanged();
-            OnPropertyChanged(A1 + " ПЕР 000 " + temp);
+            OnPropertyChanged(A1 + " TFR 000 " + temp);
         }
         public void PrintFloat(List<TableRow> output)
         {
@@ -189,14 +189,14 @@ namespace EM3
         public void IntToFloat(string A1, string A2)
         {
             A2 += ".0";
-            OnPropertyChanged(A1 + " ПЕР 000 " + A2);
+            OnPropertyChanged(A1 + " TFR 000 " + A2);
         }
         public void IntDivRemainOp(string A1, string R1, string R2)
         {
             registers.R1 = int.Parse(R1); registers.R2 = int.Parse(R2);
             int temp = Math.Abs(int.Parse(R1)) % Math.Abs(int.Parse(R2));
             registers.regsChanged();
-            OnPropertyChanged(A1 + " ПЕР 000 " + temp.ToString());
+            OnPropertyChanged(A1 + " TFR 000 " + temp.ToString());
         }
         public void ArrIterator(TableRow A1, string A2)
         {

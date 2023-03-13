@@ -22,7 +22,7 @@ namespace EM3
         public TableRow()
         {
             this.adress = "0";
-            this.command = "ПЕР";
+            this.command = "TFR";
             this.a1 = "000";
             this.a2 = "000";
         }

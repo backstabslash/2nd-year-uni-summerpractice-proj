@@ -37,7 +37,7 @@
                                         <Paragraph>0</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>ПЕР</Paragraph>
+                                        <Paragraph>TFR</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Transferring value from A2 to A1</Paragraph>
@@ -48,7 +48,7 @@
                                         <Paragraph>1</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>СЛВ</Paragraph>
+                                        <Paragraph>ADR</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Addition of real numbers: A1 = A1 + A2</Paragraph>
@@ -59,7 +59,7 @@
                                         <Paragraph>2</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>ВЧВ</Paragraph>
+                                        <Paragraph>SBR</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Subtraction of real numbers: A1 = A1 - A2</Paragraph>
@@ -70,7 +70,7 @@
                                         <Paragraph>3</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>УМВ</Paragraph>
+                                        <Paragraph>MLR</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Multiplication of real numbers: A1 = A1 * A2</Paragraph>
@@ -81,7 +81,7 @@
                                         <Paragraph>4</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>ДЕВ</Paragraph>
+                                        <Paragraph>DVR</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Division of real numbers: A1 = A1 / A2</Paragraph>
@@ -92,7 +92,7 @@
                                         <Paragraph>5</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>ВВВ</Paragraph>
+                                        <Paragraph>EAR</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>
@@ -105,7 +105,7 @@
                                         <Paragraph>6</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>ВВЦ</Paragraph>
+                                        <Paragraph>EAI</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>
@@ -140,7 +140,7 @@
                                         <Paragraph>9</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>БЕЗ</Paragraph>
+                                        <Paragraph>UNT</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Unconditional jump to A2</Paragraph>
@@ -151,7 +151,7 @@
                                         <Paragraph>10</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>ЦЕЛ</Paragraph>
+                                        <Paragraph>INT</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Convert a real number A2 to an integer A1</Paragraph>
@@ -162,7 +162,7 @@
                                         <Paragraph>11</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>СЛЦ</Paragraph>
+                                        <Paragraph>ADI</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Integer addition: A1 = A1 + A2</Paragraph>
@@ -173,7 +173,7 @@
                                         <Paragraph>12</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>ВЧЦ</Paragraph>
+                                        <Paragraph>SBI</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Integer subtraction: A1 = A1 - A2</Paragraph>
@@ -184,7 +184,7 @@
                                         <Paragraph>13</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>УМЦ</Paragraph>
+                                        <Paragraph>MLI</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Integer multiplication: A1 = A1 * A2</Paragraph>
@@ -195,7 +195,7 @@
                                         <Paragraph>14</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>ДЕЦ</Paragraph>
+                                        <Paragraph>DVI</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Integer division: A1 = A1 / A2</Paragraph>
@@ -206,7 +206,7 @@
                                         <Paragraph>15</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>ВЫВ</Paragraph>
+                                        <Paragraph>OAR</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Output A2 of real numbers starting from address A1</Paragraph>
@@ -217,7 +217,7 @@
                                         <Paragraph>16</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>ВЫЦ</Paragraph>
+                                        <Paragraph>OAI</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Output A2 integers starting at address A1</Paragraph>
@@ -239,7 +239,7 @@
                                         <Paragraph>18</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>УСП</Paragraph>
+                                        <Paragraph>CZT</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Conditional jump: Z = 0 - to A1, Z = 1 - to A2</Paragraph>
@@ -250,7 +250,7 @@
                                         <Paragraph>19</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>УСЛ</Paragraph>
+                                        <Paragraph>CWT</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Conditional jump: w = 0 or 2 - to A1, w = 1 - to A2</Paragraph>
@@ -261,7 +261,7 @@
                                         <Paragraph>20</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>ВЕЩ</Paragraph>
+                                        <Paragraph>REA</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Convert an integer A2 to a real number A1</Paragraph>
@@ -305,7 +305,7 @@
                                         <Paragraph>24</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>МОД</Paragraph>
+                                        <Paragraph>MOD</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Remainder of integer division</Paragraph>
@@ -349,7 +349,7 @@
                                         <Paragraph>30</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>ИТР</Paragraph>
+                                        <Paragraph>ITR</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Shift A1 (currently used array cell index) at address A1 by A2 elements</Paragraph>
@@ -360,7 +360,7 @@
                                         <Paragraph>31</Paragraph>
                                     </TableCell>
                                     <TableCell>
-                                        <Paragraph>ОСТ</Paragraph>
+                                        <Paragraph>END</Paragraph>
                                     </TableCell>
                                     <TableCell>
                                         <Paragraph>Stop program execution</Paragraph>
