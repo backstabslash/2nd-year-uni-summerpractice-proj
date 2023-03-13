@@ -1,8 +1,8 @@
 
 # **COMMAND SYSTEM**
-Using the principles of von Neumann, a proprietary educational computer was designed, a system of commands was designed and implemented, which allows input and output of data, performing various arithmetic operations (addition, subtraction, division, multiplication and finding remainders from division), as well as other commands for transferring data from one cell to another, etc. All commands are executed sequentially, except for unconditional and conditional transitions, which can change the standard flow of the program. Their work will be described below. Each command has two operands (addresses) that it can control. For arithmetic commands, the calculation result is written in the line with the address A1. The memory of the learning machine consists of 512 lines with addresses from 1 to 512.
+A custom educational computer was developed based on the von Neumann architecture, with a set of instructions designed and implemented to enable input and output of data, perform arithmetic operations (addition, subtraction, multiplication, division, and remainder calculation), as well as other commands to transfer data between memory locations, among other functions. All instructions execute sequentially, except for conditional and unconditional branching instructions, which can modify the program flow. Each instruction takes two operands (memory addresses) as inputs, and for arithmetic instructions, the result is stored in a memory location specified by one of the operands. The computer's memory consists of 512 lines with addresses ranging from 1 to 512.
 
-Below is a table of implemented commands, their number (some numbers are not commands, so they do not have a mnemonic equivalent - they are marked with three question marks - ???) and a brief description:
+A table is provided below with the implemented instructions, their corresponding mnemonic codes, and a brief description of their functions:
 
 |**№**|**COM**|**DESCRIPTION**|
 | :-: | :-: | :-: |
@@ -40,45 +40,36 @@ Below is a table of implemented commands, their number (some numbers are not com
 ***Table 1**. Learning machine command system*
 
 # **REGISTERS AND FLAGS**
-Registers are the operands used to execute the current instruction. Registers are divided into the following types according to their logical perception: RK, R1, R2, RA. RK is a register that represents the current command; RA is the address number of the current line; R1 and R2 are the operands on which the instruction is executed.
+The current instruction in the machine is executed using operands stored in registers, which are categorized as RK, R1, R2, and RA based on their logical interpretation. RK represents the current command, RA represents the address number of the current line, and R1 and R2 are the operands on which the instruction is executed.
 
-The flag 𝜔 ("omega"), which changes depending on the result of the operations of addition, subtraction, division, multiplication, is used for conditional transition Yes, its value will be 0 if the result of the operation is zero. If the result of the operation is less than zero, the flag will be set to the value 1, if the result is greater than zero, it will have the value 2. It is used to implement the conditional transition operation.
+The 𝜔 flag, also known as "omega," changes based on the result of arithmetic operations such as addition, subtraction, division, and multiplication. It is used for conditional transitions and has a value of 0 if the result of the operation is zero. If the result is less than zero, the flag is set to 1; if greater than zero, it is set to 2.
 
-The S flag is the result sign flag.
+Other flags include S, which represents the result sign, C, which represents the sign of the transfer from the higher order, T, which is a step-by-step mode flag (for debugging), and Z, which represents a zero-result flag used in conditional transitions.
 
-Flag C is the flag of the sign of the transfer from the higher order.
+In case of an error during program execution, the Err flag is raised and its value changes from 0 to 1, causing the program to crash.
 
-The T flag is a turn-by-turn mode flag.
-
-The Z flag is a zero-result flag used to implement a conditional transition operation.
-
-The Err flag is an error flag. It signals the occurrence of an error during the execution of the program. By default, it has a value of 0, which means no errors, but when an error occurs, it changes to 1 and the program crashes.
-
-All registers and flags have been moved to the GUI form panel, so that you can get complete information about the current command and its operands while running the machine in debug mode.
+All registers and flags are accessible through the GUI form panel, providing complete information about the current command and its operands during machine execution in debug mode.
 
 # **IMPLEMENTATION OF EDUCATIONAL** **MACHINE**
 **TOOLS**
 
-The emulator of the two-address learning machine was implemented using the C# programming language and using the framework for building applications with a graphical user interface for the platforms of the Windows family of operating systems, which is called the Microsoft WPF .Net Framework. The project was implemented in Microsoft Visual Studio 2022 integrated development environment.
+The emulator for the two-address learning machine was developed using C# programming language and the Microsoft WPF .Net Framework, which is a framework for building graphical user interfaces for Windows operating systems. The project was created in the Microsoft Visual Studio 2022 integrated development environment.
 
 **GRAPHICAL USER INTERFACE**
 
-For the convenience of using the educational machine, a graphical user interface was created. Data is entered using the keyboard, and the emulator is controlled using the mouse. Below is a screenshot of the window, which is the main window with which the user interacts. Numbers from 1 to 6 indicate the interface elements, the functioning and purpose of which is described below.
+The graphical user interface (GUI) of the educational machine is designed to simplify its use. It includes several functional elements, which are numbered in the screenshot of the main window.
 
 ![mainui](https://github.com/backstabslash/2nd-year-uni-summerpractice-proj/blob/master/EM2/ui.PNG)
 
 ***Picture 1**. Graphical user interface*
 
-
-List and description of interface elements marked in Picture 1:
-
-1. Table with program code. Here, the user can enter and edit program commands for further use. The user is allowed to enter both integers and real numbers. If the user enters incorrect data, when starting the program, a corresponding error will be displayed in the diagnostics window.
-2. During the operation of the program, with the help of the corresponding commands specified by the user in the code table, the program can ask the user to enter data (integer or real number). To do this, a window will appear in which you will need to enter a number using the keyboard. If you enter an incorrect value or cancel the input operation, the program will display a corresponding error in the diagnostics window. If the entered value is correct, the program will continue its work, and the entered number will appear in the "Input" window. Thus, the user can remember what data he entered in the program.
-3. The result of the program can be an integer or a real number. To display this information, you need to give the training machine one of the appropriate commands, and the number itself will be displayed in the "Output" window.
-4. In the interface there is a panel of registers and flags that change during the execution of the program. In step-by-step mode, this panel clearly demonstrates the program execution process.
-5. During the execution of the program in the learning machine, some warnings and remarks or unexpected situations may occur. In this case, all messages generated by the program will be displayed in the "Diagnostics" window.
+1. The program code table allows users to enter and edit commands for the learning machine. This table supports both integer and real numbers as inputs. If the user enters incorrect data, the diagnostics window will display an error message upon program start.
+2. During program execution, the user may be prompted to enter data via a pop-up window. Users can enter integer or real numbers using the keyboard. If an incorrect value is entered or the user cancels the input operation, an error message will be displayed in the diagnostics window. Otherwise, the entered value will be displayed in the "Input" window.
+3. The "Output" window displays the integer or real number generated by the program.
+4. The registers and flags panel displays the current values of these components during program execution. In step-by-step mode, this panel provides a clear demonstration of the program execution process.
+5. The "Diagnostics" window displays any warnings, remarks, or unexpected situations that may occur during program execution.
 6. The panel displays the path to the open file.
-7. At the top of the window there are auxiliary and control buttons: "Save", "Save as", "Open", "Help" and "Cleaning"; "Run" - run the program without debugging, "Start debugging" - start a step-by-step program run, "Step" - go to the next command, "Finish debugging" - end a step-by-step program run.
+7. The top of the window contains several auxiliary and control buttons, including "Save", "Save as", "Open", "Help", and "Cleaning". The "Run" button runs the program without debugging, the "Start debugging" button starts a step-by-step program run, the "Step" button goes to the next command, and the "Finish debugging" button ends the step-by-step program run.
 
 ![](https://github.com/backstabslash/2nd-year-uni-summerpractice-proj/blob/master/EM2/input.png)
 
@@ -89,7 +80,7 @@ List and description of interface elements marked in Picture 1:
 ***Picture 3.** Help window*
 # **TRAINING MACHINE PROGRAMS**
 ## **LINEAR CALCULATIONS**
-To test the possibility of implementations of linear calculations, we will compile a program for its subsequent launch using the created learning machine emulator.
+We will test the feasibility of linear calculations by compiling a program and running it on the emulator of the learning machine we have created. This will allow us to evaluate the implementation of arithmetic operations, including addition, subtraction, multiplication, and division.
 
 Task #17: calculate the value of the function y = (4 * x^3 + 10 * z) / (x * z^2), the values of “x” and “z” are set by the user using input operations from the keyboard.
 
@@ -117,7 +108,7 @@ Below is the code of the corresponding program in the form of a table:
 ***Table 2**. Linear expression calculation program code*
 
 ## **CALCULATION USING CYCLES**
-To test the possibility of implementations of cyclic calculations, we will compile a suitable program for its subsequent launch using the created learning machine emulator.
+In order to explore the potential of implementing cyclic calculations, we will develop a program that utilizes loops and control structures. This program will be compiled and executed using the newly created learning machine emulator. By doing so, we can assess the emulator's ability to handle iterative computations and further validate its capabilities.
 
 Task #2: calculate the value of the expression (wolfram alpha math input) y = Product[i^3 / (a - b), {i, 1, n}] with the values “*a”* and “b” specified by the user, if a != b, or calculate the value of the expression (a - b) / (a + b) if a = b.
 
@@ -159,7 +150,7 @@ Below is the code of the corresponding program in the form of a table:
 
 
 ## **CALCULATIONS USING CYCLES (ARRAYS)**
-To test the possibility of implementations of array calculations using cycles, we will compile a suitable program for its subsequent launch using the created learning machine emulator.
+In order to assess the potential of the learning machine emulator for implementing array calculations using loops, we will compile a program and subsequently launch it using the emulator. This program will serve as a test case to evaluate the accuracy and efficiency of the emulator when executing array calculations through the use of loops.
 
 Task No. 11: Compile a program for counting in an integer array the number of zero elements after the element with the number specified by the user.
 
