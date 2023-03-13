@@ -190,4 +190,5 @@ Below is the code of the corresponding program in the form of a table:
 
 ***Table 4**. Code of the program for calculating arrays using loops*
 
-If you encounter any confusion while using the emulator, please don't hesitate to reach out to me at https://t.me/worriedsick! I'll be more than happy to assist you with any questions or concerns you may have.
+If you have any difficulties while using the emulator, please don't hesitate to contact me at https://t.me/worriedsick or via email at tymofii.striukov@gmail.com.
+I'll be more than happy to assist you with any questions or concerns you may have.
