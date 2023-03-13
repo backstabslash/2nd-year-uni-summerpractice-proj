@@ -6,36 +6,36 @@ Below is a table of implemented commands, their number (some numbers are not com
 
 |**№**|**COM**|**DESCRIPTION**|
 | :-: | :-: | :-: |
-|0|ПЕР|Transferring value from A2 to A1|
-|1|СЛВ|Addition of real numbers: A1 = A1 + A2|
-|2|ВЧВ|Subtraction of real numbers: A1 = A1 - A2|
-|3|УМВ|Multiplication of real numbers: A1 = A1 × A2|
-|4|ДЕВ|Division of real numbers: A1 = A1 ÷ A2|
-|5|ВВВ|Inputting an array of real numbers in quantity A2, starting from address A1|
-|6|ВВЦ|Entering an array of integers in the amount of A2, starting from the address A1|
+|0|TFR|Transferring value from A2 to A1|
+|1|ADR|Addition of real numbers: A1 = A1 + A2|
+|2|SBR|Subtraction of real numbers: A1 = A1 - A2|
+|3|MLR|Multiplication of real numbers: A1 = A1 × A2|
+|4|DVR|Division of real numbers: A1 = A1 ÷ A2|
+|5|EAR|Entering an array of real numbers in quantity A2, starting from address A1|
+|6|EAI|Entering an array of integers in the amount of A2, starting from the address A1|
 |7|???|???|
 |8|???|???|
-|9|БЕЗ|Unconditional transition from the current line to line A2|
-|10|ЦЕЛ|Conversion of real number A1 to integer A2|
-|11|СЛЦ|Addition of integers: A1 = A1 + A2|
-|12|ВЧЦ|Subtraction of integers: A1 = A1 - A2|
-|13|УМЦ|Multiplication of integers: A1 = A1 × A2|
-|14|ДЕЦ|Division of integers: A1 = A1 ÷ A2|
-|15|ВЫВ|Output of the array of real numbers in the quantity A2, starting from the address A1|
-|16|ВЫЦ|Output of an array of integers in quantity A2, starting from address A1|
+|9|UNT|Unconditional transition from the current line to line A2|
+|10|INT|Conversion of real number A1 to integer A2|
+|11|ADI|Addition of integers: A1 = A1 + A2|
+|12|SBI|Subtraction of integers: A1 = A1 - A2|
+|13|MLI|Multiplication of integers: A1 = A1 × A2|
+|14|DVI|Division of integers: A1 = A1 ÷ A2|
+|15|OAR|Output of the array of real numbers in the quantity A2, starting from the address A1|
+|16|OAI|Output of an array of integers in quantity A2, starting from address A1|
 |17|???|???|
-|18|УСП|Conditional transition: if the flag Z is 0 — transition to line A1, if the flag Z* is 1 — transition to line A2|
-|19|УСЛ|Conditional transition: if the flag 𝜔 is 0 or 2 — transition to line A1, if flag 𝜔* is 1 — transition to line A2|
-|20|ВЕЩ|Conversion of an integer A1 into a real number A2|
+|18|CZT|Conditional transition: if the flag Z is 0 — transition to line A1, if the flag Z* is 1 — transition to line A2|
+|19|CWT|Conditional transition: if the flag 𝜔 is 0 or 2 — transition to line A1, if flag 𝜔* is 1 — transition to line A2|
+|20|REA|Conversion of an integer A1 into a real number A2|
 |21|???|???|
 |…|…|…|
 |23|???|???|
-|24|МОД|Remainder from division of whole numbers|
+|24|MOD|Remainder from division of integers|
 |25|???|???|
 |…|…|…|
 |29|???|???|
-|30|ИТР|Move A2 (currently used array cell index) at address A1 to A2 elements|
-|31|ОСТ|Completion of program execution|
+|30|ITR|Move A2 (currently used array cell index) at address A1 to A2 elements|
+|31|END|Completion of program execution|
 
 ***Table 1**. Learning machine command system*
 
