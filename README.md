@@ -1,4 +1,6 @@
+https://user-images.githubusercontent.com/71657988/224806490-c6558db3-e9df-4f1d-8591-7bf34b66433e.mp4
 
+You can find the details of the tests either towards the end of the video or in the lower section of the application description.
 # **COMMAND SYSTEM**
 A custom educational computer was developed based on the von Neumann architecture, with a set of instructions designed and implemented to enable input and output of data, perform arithmetic operations (addition, subtraction, multiplication, division, and remainder calculation), as well as other commands to transfer data between memory locations, among other functions. All instructions execute sequentially, except for conditional and unconditional branching instructions, which can modify the program flow. Each instruction takes two operands (memory addresses) as inputs, and for arithmetic instructions, the result is stored in a memory location specified by one of the operands. The computer's memory consists of 512 lines with addresses ranging from 1 to 512.
 
